@@ -23,9 +23,8 @@ const routes = [
     }
   ];
   
-class SidebarExample extends Component{
+class SidebarLatifa extends Component{
   render(){
-    console.log(this.props)
     return(
       <Router>
       <div style={{ display: "flex" }}>
@@ -88,4 +87,4 @@ class SidebarExample extends Component{
   }
 }
   
-  export default SidebarExample;
+  export default SidebarLatifa;
