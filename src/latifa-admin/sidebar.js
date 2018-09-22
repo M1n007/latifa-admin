@@ -29,7 +29,7 @@ class SidebarLatifa extends Component{
   render(){
     return(
       <Router>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex" }} className="all-sidebar">
         {
           this.props.showSide == true ? (
             <div className="main-sidebar">
@@ -105,7 +105,7 @@ class SidebarLatifa extends Component{
           )
         }
   
-        <div style={{ flex: 1, padding: "10px", paddingLeft: "45px" }}>
+        <div style={{ flex: 1, padding: "10px", paddingLeft: "45px", }}>
           {routes.map((route, index) => (
             // Render more <Route>s with the same paths as
             // above, but different components this time.

@@ -5,12 +5,17 @@
     height:100vh;
 }
 
+.all-sidebar{
+    padding-top: 75px;
+}
+
 .main-sidebar-icon{
     padding: 10px;
     width: 2%;
     background:  #34495e;
     height:100vh;
 }
+
 
 .icon-and-title{
     display: flex;

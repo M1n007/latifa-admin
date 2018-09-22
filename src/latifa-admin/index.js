@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Ionicon from 'react-ionicons'
 import logo from './assets/icon/logo.svg'
+import iconProfile from './assets/icon/blank.jpg'
 import './assets/css/latifaCustom.css'
 
 import Sidebar from './sidebar'
@@ -23,7 +24,7 @@ export default class IndexLatifa extends Component {
                     <div className="navbar">
                         <div className="header-left">
                             <div>
-                                <img src={logo} className="logo"/>
+                                <img src={logo} className="logo" alt="logo"/>
                             </div>
                             <div style={styles.wrapNavRight}>
                                 <div>
@@ -47,7 +48,15 @@ export default class IndexLatifa extends Component {
                         </div>
                         <div className="header-right">
                             <button className="buttonStyle">
-                                <Ionicon icon="ios-menu" fontSize="30px" color="#b8b8b8" />
+                                <Ionicon icon="ios-notifications-outline" fontSize="30px" color="#b8b8b8" />
+                            </button>
+                            <button className="dropdown buttonStyleDrop" style={{float:'right'}}>
+                                <img className="iconProfile dropbtn"  src={iconProfile} alt="icon profile"/>
+                                <div class="dropdown-content">
+                                    <a href="#">Link 1</a>
+                                    <a href="#">Link 2</a>
+                                    <a href="#">Link 3</a>
+                                </div>
                             </button>
                         </div>
                     </div>
