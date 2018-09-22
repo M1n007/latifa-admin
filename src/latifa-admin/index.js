@@ -54,13 +54,7 @@ export default class IndexLatifa extends Component {
                 </div>
 
                 
-                {
-                    this.state.leftNav == true ? (
-                        <div className="sidebarHeight">
-                            <Sidebar/>
-                        </div>
-                    ):null
-                }
+                <Sidebar showSide={this.state.leftNav}/>
             </div>
         )
     }
@@ -72,4 +66,7 @@ var styles = {
         flexDirection: 'row',
         display: 'flex',
     },
+    openStyle : {
+        transform: 'translate(0, 20)'
+    }
 }

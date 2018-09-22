@@ -46,7 +46,8 @@
 
 .sidebar{
     background: #34495e;
-    width: 18%
+    width: 18%;
+    height: 1000000;
 }
 
 .closeAnim {
