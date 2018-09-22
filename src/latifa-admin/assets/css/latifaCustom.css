@@ -35,3 +35,35 @@
     height: 100%;
 }
 
+.buttonStyle{
+    background-color: transparent;
+    border:0
+}
+
+.buttonStyle:hover{
+    background-color: #34495e;
+}
+
+.sidebar{
+    background: #34495e;
+    width: 18%
+}
+
+.closeAnim {
+    animation: closeRotate 1s ease-in 0s alternate;
+}
+@keyframes closeRotate {
+    to{
+        transform: rotate(100deg)
+    }
+}
+
+.closeMenu {
+    animation: closeMenu 0s ease-in 0s alternate;
+}
+@keyframes closeMenu {
+    to{
+        transform: rotate(-60deg)
+    }
+}
+

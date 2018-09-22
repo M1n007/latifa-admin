@@ -6,12 +6,14 @@ import './assets/css/latifaCustom.css'
 import Sidebar from './sidebar'
 export default class IndexLatifa extends Component {
     state = {
-        leftNav: false
+        leftNav: false,
+  
     }
 
     handleLeftNav(){
         this.setState({
-            leftNav:!this.state.leftNav
+            leftNav:!this.state.leftNav,
+            
         })
     }
     render(){
@@ -25,20 +27,27 @@ export default class IndexLatifa extends Component {
                             </div>
                             <div style={styles.wrapNavRight}>
                                 <div>
-                                    <button style={styles.buttonIconMenu} onClick={()=>this.handleLeftNav()}>
-                                        <Ionicon icon="ios-menu" fontSize="30px" color="#b8b8b8"/>
+                                    <button className="buttonStyle" onClick={()=>this.handleLeftNav()}>
+                                    {
+                                        this.state.leftNav == false ? (
+                                            <Ionicon icon="ios-menu" fontSize="30px" color="#b8b8b8"/>
+                                        ):(
+                                            <Ionicon icon="ios-close" fontSize="30px" color="#b8b8b8" className="closeAnim"/>
+                                        )
+                                    }
+                                    
                                     </button>
                                 </div>
                                 <div style={{paddingLeft:15, alignSelf:'center'}}>
-                                    <button style={styles.buttonIconMenu}>
+                                    <button className="buttonStyle">
                                         <font style={{color:"#b8b8b8"}}>Dashboard</font>
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <div className="header-right">
-                            <button style={styles.buttonIconMenu}>
-                                <Ionicon icon="ios-menu" fontSize="30px" color="#b8b8b8"/>
+                            <button className="buttonStyle">
+                                <Ionicon icon="ios-menu" fontSize="30px" color="#b8b8b8" />
                             </button>
                         </div>
                     </div>
@@ -63,8 +72,4 @@ var styles = {
         flexDirection: 'row',
         display: 'flex',
     },
-    buttonIconMenu:{
-        background:'transparent',
-        border:0
-    }
 }
