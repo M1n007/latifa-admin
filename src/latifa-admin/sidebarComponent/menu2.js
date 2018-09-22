@@ -5,7 +5,7 @@ export default class Menu2 extends Component{
     render(){
         return(
             <div>
-                <font>Menu 2</font>
+                <font>This is a sweet project screen like you :*</font>
             </div>
         )
     }

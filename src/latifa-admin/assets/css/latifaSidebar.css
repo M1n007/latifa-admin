@@ -1,0 +1,40 @@
+.main-sidebar{
+    padding: 10px;
+    width: 15%;
+    background: #34495e;
+    height:100vh;
+}
+
+.main-sidebar-icon{
+    padding: 10px;
+    width: 2%;
+    background:  #34495e;
+    height:100vh;
+}
+
+.icon-and-title{
+    display: flex;
+    flex-direction: row;
+}
+
+.link{
+    color: #ffffff;
+    text-decoration: none
+}
+
+.link-active{
+    color: aqua
+}
+
+.link-icon-active{
+    background-color: aqua
+}
+
+.icon{
+    padding-bottom: 25px;
+}
+
+.title{
+    padding-top: 4px;
+    padding-left: 20px;
+}

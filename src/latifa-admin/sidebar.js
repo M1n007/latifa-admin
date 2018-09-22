@@ -1,24 +1,26 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import Ionicon from 'react-ionicons'
 
 import Menu from './sidebarComponent/menu'
 import Menu2 from './sidebarComponent/menu2'
 import Menu3 from './sidebarComponent/menu3'
 
 import './assets/css/latifaCustom.css'
+import './assets/css/latifaSidebar.css'
 
 const routes = [
     {
-      path: "/",
+      path: "/home",
       exact: true,
       main: () => <Menu/>
     },
     {
-      path: "/menu2",
+      path: "/projects",
       main: () => <Menu2/>
     },
     {
-      path: "/menu3",
+      path: "/calendar",
       main: () => <Menu3/>
     }
   ];
@@ -30,23 +32,31 @@ class SidebarLatifa extends Component{
       <div style={{ display: "flex" }}>
         {
           this.props.showSide == true ? (
-            <div
-              style={{
-                padding: "10px",
-                width: "15%",
-                background: " #34495e",
-                height:"100%"
-              }}
-            >
+            <div className="main-sidebar">
               <ul style={{ listStyleType: "none", padding: 0,}}>
                 <li>
-                  <Link to="/" style={{color:'white'}} >Home</Link>
+                  <NavLink to="/home" className="link" activeClassName="link-active">
+                    <div className="icon-and-title">
+                      <Ionicon icon="ios-home" color="#fff" className="icon"/>
+                      <font className="title">Home</font>
+                    </div>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/menu2" style={{color:'white'}}>Menu 2</Link>
+                  <NavLink to="/projects" className="link" activeClassName="link-active">
+                    <div className="icon-and-title">
+                      <Ionicon icon="ios-briefcase" color="#fff" className="icon"/>
+                      <font className="title">Project</font>
+                    </div>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/menu3" style={{color:'white'}}>Menu 3</Link>
+                  <NavLink to="/calendar" className="link" activeClassName="link-active">
+                    <div className="icon-and-title">
+                      <Ionicon icon="ios-calendar" color="#fff" className="icon"/>
+                      <font className="title">Calendar</font>
+                    </div>
+                  </NavLink>
                 </li>
               </ul>
       
@@ -66,7 +76,33 @@ class SidebarLatifa extends Component{
                 />
               ))} */}
             </div>
-          ):null
+          ):(
+            <div className="main-sidebar-icon">
+              <ul style={{ listStyleType: "none", padding: 0,}}>
+                <li>
+                  <NavLink to="/home" className="link" activeClassName="link-icon-active">
+                    <div className="icon-and-title">
+                      <Ionicon icon="ios-home" color="#fff" className="icon"/>
+                    </div>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/projects" className="link" activeClassName="link-icon-active">
+                    <div className="icon-and-title">
+                      <Ionicon icon="ios-briefcase" color="#fff" className="icon"/>
+                    </div>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/calendar" className="link" activeClassName="link-icon-active">
+                    <div className="icon-and-title">
+                      <Ionicon icon="ios-calendar" color="#fff" className="icon"/>
+                    </div>
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          )
         }
   
         <div style={{ flex: 1, padding: "10px", paddingLeft: "45px" }}>
